@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけんゲーム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- スタート画面 -->
+    <div id="start-screen" class="screen active">
+        <div class="container">
+            <h1 class="title">じゃんけんゲーム</h1>
+            <p class="subtitle">モダンなじゃんけん体験をお楽しみください</p>
+            <button id="start-btn" class="start-button">ゲームスタート</button>
+        </div>
+        <div class="background-animation"></div>
+    </div>
+
+    <!-- じゃんけん画面 -->
+    <div id="game-screen" class="screen">
+        <div class="game-container">
+            <h2 class="game-title">じゃんけん勝負！</h2>
+            <div class="choices">
+                <button class="choice-btn" data-choice="rock">
+                    <span class="choice-emoji">✊</span>
+                    <span class="choice-text">グー</span>
+                </button>
+                <button class="choice-btn" data-choice="paper">
+                    <span class="choice-emoji">✋</span>
+                    <span class="choice-text">パー</span>
+                </button>
+                <button class="choice-btn" data-choice="scissors">
+                    <span class="choice-emoji">✌️</span>
+                    <span class="choice-text">チョキ</span>
+                </button>
+            </div>
+            <div id="battle-result" class="battle-result hidden">
+                <div class="battle-display">
+                    <div class="player-choice">
+                        <h3>あなた</h3>
+                        <div id="player-choice-display" class="choice-display"></div>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="cpu-choice">
+                        <h3>CPU</h3>
+                        <div id="cpu-choice-display" class="choice-display"></div>
+                    </div>
+                </div>
+                <div id="round-result" class="round-result"></div>
+                <button id="continue-btn" class="continue-btn hidden">続ける</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 結果画面 -->
+    <div id="result-screen" class="screen">
+        <div class="result-container">
+            <h2 class="result-title">勝負結果</h2>
+            <div id="final-result" class="final-result"></div>
+            <div id="draw-count" class="draw-count"></div>
+            <div class="result-buttons">
+                <button id="retry-btn" class="retry-button">リトライ</button>
+                <button id="restart-btn" class="restart-button">最初から</button>
+            </div>
+        </div>
+        <div class="result-background"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>
